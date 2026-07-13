@@ -9,8 +9,6 @@
 import processing.sound.*;  // Butuh library "Sound" — install via
                              // Sketch > Import Library > Sound
 
-final int CANVAS_W = 1280;
-final int CANVAS_H = 720;
 final int FPS      = 24;
 
 // Audio dialog utama (1 file untuk seluruh animasi)
