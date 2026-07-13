@@ -7,8 +7,8 @@ ter-compile bareng jadi satu program saat `DesaBersih.pde` dibuka.
 
 ## Cara pakai
 1. Buka `DesaBersih.pde` lewat Processing IDE (bukan file lain).
-2. Semua tab lain (Actors, Props, Palette, TimeLine, S01-S23) akan
-   otomatis muncul sebagai tab-tab di IDE yang sama.
+2. Semua tab lain (Actors, TimeLine, S01-S23) akan otomatis muncul
+   sebagai tab-tab di IDE yang sama.
 3. Klik Run — `setup()` load background, `draw()` manggil
    `runTimeline()` yang otomatis pilih scene aktif.
 
@@ -17,22 +17,20 @@ ter-compile bareng jadi satu program saat `DesaBersih.pde` dibuka.
 DesaBersih/
 ├── DesaBersih.pde   <- setup()/draw() SATU-SATUNYA di project ini
 ├── TimeLine.pde     <- runTimeline() dispatcher + durasi tiap scene
-├── Palette.pde      <- warna bersama (baru starter set)
-├── Props.pde        <- kosong, tinggal pindahkan props S01-S03 lama
+├── UI.pde           <- dialog bubble & text wrap
 ├── Actors.pde       <- SEMUA fungsi drawXxx karakter
 ├── S01.pde ... S23.pde  <- satu file per shot
 ├── data/
-│   └── background_s7-s12.png
+│   ├── background s1.png
+│   ├── background s2 alt.png
+│   ├── background_s7-s12.png
+│   └── DialogAnimasi.wav
 └── README.md        <- file ini
 ```
 
 ## Status tiap scene
-| Scene | Status |
-|---|---|
-| S01-S03 | Pernah dibangun sesi sebelumnya, tapi kodenya **tidak ada** di sesi ini — tab-nya cuma stub `TODO`, tinggal tempel kode lama kamu ke fungsi `sceneSXX()`. |
-| S04-S06 | Belum dibangun — stub kosong. |
-| **S07** | **Selesai** — Karso pidato (gestur tangan + mulut buka-tutup) di tengah panggung, Dolf & Rahma idle di karpet kiri, Sari/Bu Darmi/Ibu Sari idle di karpet kanan. |
-| S08-S23 | Belum dibangun — stub kosong. |
+Semua scene **S01–S23 sudah selesai diimplementasi** dan tersambung
+ke dispatcher `runTimeline()` di `TimeLine.pde`.
 
 ## Yang masih perlu dicek
 - **Skala karakter di S07** (`S07_CHAR_SCALE = 0.33`) — hasil estimasi
